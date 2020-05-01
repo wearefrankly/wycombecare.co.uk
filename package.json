@@ -1,0 +1,32 @@
+{
+  "name": "wycombecare.co.uk",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "gulp builddev & gulp watch",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "clean-css": "^4.1.11",
+    "gulp": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-rename": "^1.3.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-shell": "^0.6.5",
+    "gulp-uglify": "^3.0.0",
+    "html-minifier": "^3.5.19",
+    "luxon": "^1.3.1",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "marked": "^0.8.0",
+    "nunjucks-markdown": "^2.0.1",
+    "require-dir": "^1.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.22.2"
+  }
+}

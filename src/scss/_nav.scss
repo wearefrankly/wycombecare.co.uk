@@ -1,0 +1,56 @@
+.nav ul {
+	list-style: none;
+	overflow-x: scroll;
+	white-space: nowrap;
+	font-size: 0px;
+	@include mq($from: 800px) {
+		white-space: normal;
+		overflow-x: initial;
+	}
+}
+
+.nav li {
+	display: inline-block;
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.nav a:link,
+.nav a:visited {
+	text-decoration: none;
+	display: block;
+	padding: 15px 15px 15px;
+	color: $colour-grey-700;
+	@include mq($from: 800px) {
+		padding-top: 17px;
+		padding-bottom: 20px;
+	}
+}
+
+.nav a:focus {
+	position: relative;
+	outline-offset: -3px;
+}
+
+.nav a:hover {
+	color: $colour-black;
+}
+
+.nav a:active,
+.nav a[aria-current=true]:active {
+	background-color: $colour-green-200;
+}
+
+.nav a:active {
+	background-color: $colour-green-100;
+	border-color: $colour-green-100;
+}
+
+.nav a[aria-current=true]:active {
+	border-color: $colour-green-500;
+}
+
+.nav a[aria-current=true] {
+	font-weight: bold;
+	color: $colour-grey-900;
+}

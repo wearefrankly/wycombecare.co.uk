@@ -1,0 +1,53 @@
+{% set pageTitle = site.title %}
+{% if title %}
+	{% set pageTitle = title + ' - Wycombe Care, UK. ' %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+
+{% if description %}
+  <meta name="description" content="{{description | safe}}">
+{% else %}
+  <meta name="description" content="{{site.description | safe }}">
+{% endif %}
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+<meta name="google-site-verification" content="k-_cerp2rDo4OTVJe_txw2LcU3SccKKB2N1fz82ZV5M" />
+
+{% include "partials/favicon.njk" %}
+
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ pageTitle }}">
+
+{% if description %}
+	<meta property="og:description" content="{{ description }}">
+{% else %}
+	<meta property="og:description" content="{{ site.description }}">
+{% endif %}
+
+{% if image %}
+  {% set imageUrl = site.url + image %}
+{% else %}
+	{% set imageUrl = site.url + '/assets/images/card.png' %}
+{% endif %}
+
+<meta property="og:url" content="{{ site.url }}{{ page.url | permalink }}">
+<meta property="og:site_name" content="wycombecare.co.uk">
+<meta property="og:image" content="{{imageUrl}}">
+<meta property="og:image:width" content="181">
+<meta property="og:image:height" content="181">
+
+<meta name="twitter:card" content="summary">
+
+{% if description %}
+	<meta itemprop="description" content="{{ description }}">
+{% else %}
+	<meta itemprop="description" content="{{ site.description }}">
+{% endif %}
+
+{% include 'partials/headCss.njk' %}
+
+<link rel="canonical" href="{{ site.url }}{{ page.url | permalink }}">
