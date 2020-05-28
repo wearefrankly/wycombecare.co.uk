@@ -44,19 +44,14 @@
 
 .nav a:active,
 .nav a[aria-current=true]:active {
-	background-color: $colour-green-200;
 }
 
 .nav a:active {
-	background-color: $colour-green-100;
 	border-color: $colour-green-100;
 }
 
-.nav a[aria-current=true]:active {
-	border-color: $colour-green-500;
-}
 
 .nav a[aria-current=true] {
 	font-weight: bold;
-	color: $colour-grey-900;
+	color: $colour-black;
 }

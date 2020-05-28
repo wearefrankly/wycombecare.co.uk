@@ -5,9 +5,7 @@ input {
 
 html {
 	font-size: 100%;
-	font-family: 'Inter', arial, sans-serif;
-	// background-color: $colour-green-100;
-	// background-color: #FBFDED;
+	font-family: 'PT Serif', arial, sans-serif;
 }
 
 body {
@@ -75,39 +73,6 @@ main {
 	}
 }
 
-.content .body-l {
-	max-width: 620px;
-	font-size: rem(22px);
-	line-height: rem(30px);
-	margin-bottom: $spacing-scale-5;
-	font-family: 'PT Serif';
-
-	@include mq($from: md) {
-		font-size: rem(28px);
-		line-height: rem(40px);
-		margin-bottom: $spacing-scale-7;
-	}
-}
-
-
-.hero {
-	margin-top: 60px;
-	position: relative;
-	margin-bottom: 40px;
-}
-
-.hero-left {
-	position: relative;
-	width: 45%;
-	padding-top: 95px;
-	z-index: 9;
-	// padding-left: 50px;
-}
-
-.hero-right {
-
-}
-
 .heading {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -127,26 +92,12 @@ main {
 	}
 }
 
-.heading-label {
-	font-size: rem(18px);
-	line-height: rem(25px);
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-	color: $colour-grey-400;
-	font-weight: bold;
-	display: block;
-	@include mq($from: md) {
-		font-size: rem(20px);
-	line-height: rem(25px);
-	}
-}
-
 .heading-title {
 	font-size: rem(40px);
 	line-height: rem(40px);
 	font-family: 'PT Serif';
 	font-weight: normal;
-	color: $colour-grey-800;
+	color: $colour-black;
 
 	max-width: rem(1000px);
 	margin-bottom: 30px;
@@ -171,7 +122,6 @@ main {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	@include mq($from: md) {
-		padding-top: 110px;
 		padding-bottom: 110px;
 	}
 }
@@ -275,9 +225,9 @@ main {
 	margin-bottom: 25px;
 
 	@include mq($from: md) {
-		font-size: rem(22px);
-		line-height: rem(35px);
-		margin-bottom: 35px;
+		font-size: rem(25px);
+		line-height: rem(40px);
+		margin-bottom: $spacing-scale-7;
 	}
 }
 
