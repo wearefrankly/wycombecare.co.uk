@@ -1,23 +1,24 @@
 .nav {
-	margin-top: 30px;
+	margin-top: 15px;
+	@include mq($from: 800px) {
+		margin-top: 20px;
+	}
 }
 
 .nav ul {
 	list-style: none;
-	overflow-x: scroll;
-	white-space: nowrap;
 	font-size: 0px;
 	font-family: 'PT Serif';
-	@include mq($from: 800px) {
-		white-space: normal;
-		overflow-x: initial;
-	}
 }
 
 .nav li {
-	display: inline-block;
-	line-height: 20px;
-	font-size: 22px;
+	font-size: rem(18px);
+	line-height: 0.8em;
+	@include mq($from: 800px) {
+		display: inline-block;
+		font-size: rem(25px);
+		line-height: rem(40px);
+	}
 }
 
 .nav a:link,

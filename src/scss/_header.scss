@@ -4,9 +4,7 @@
 
 .header-measure {
 	max-width: 1200px;
-	@include mq($from: 600px) {
-		@include clearfix;
-	}
+	@include clearfix;
 	@include mq($from: 1240px) {
 		margin-left: auto;
 		margin-right: auto;
@@ -22,6 +20,8 @@
 	font-weight: bold;
 	font-family: 'PT Serif';
 	letter-spacing: -0.03em;
+	margin-top: 25px;
+	float: left;
 
 	a {
 		color: $colour-grey-800;
@@ -29,9 +29,14 @@
 		border: none;
 	}
 
+	img {
+		width: 150px;
+	}
+
 	@include mq($from: 800px) {
-		float: left;
-		margin-top: 25px;
+		img {
+			width: 200px;
+		}
 	}
 	@include mq($from: 1240px) {
 		padding-left: 0;
@@ -39,12 +44,10 @@
 }
 
 .header-nav {
-	border-top: 1px solid $colour-blue-200;
-	border-bottom: 1px solid $colour-blue-200;
 	padding-left: 5px;
 	padding-right: 5px;
+	float: right;
 	@include mq($from: 800px) {
-		float: right;
 		border-top: none;
 		border-bottom: none;
 		margin-top: 15px;

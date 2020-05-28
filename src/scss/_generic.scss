@@ -39,21 +39,26 @@ main {
 
 .homepage-hero {
 	padding-top: 30px;
+
+	img {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
 
 .homepage-title {
-	font-size: rem(40px);
+	font-size: rem(32px);
 	line-height: rem(40px);
-	font-family: 'PT Serif';
 	font-weight: normal;
 	color: $colour-black;
 
 	max-width: rem(1000px);
 	margin: 0 auto;
 	letter-spacing: -0.03em;
+	text-align: center;
+	margin-bottom: 25px;
 	@include mq($from: md) {
 		margin-bottom: 40px;
-		text-align: center;
 		font-size: rem(64px);
 		line-height: rem(70px);
 	}
@@ -64,7 +69,6 @@ main {
 	font-size: rem(18px);
 	line-height: rem(25px);
 	margin-bottom: $spacing-scale-5;
-	font-family: 'PT Serif';
 
 	@include mq($from: md) {
 		font-size: rem(25px);
@@ -95,7 +99,6 @@ main {
 .heading-title {
 	font-size: rem(40px);
 	line-height: rem(40px);
-	font-family: 'PT Serif';
 	font-weight: normal;
 	color: $colour-black;
 
@@ -119,10 +122,11 @@ main {
 }
 
 .content {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 30px;
+	padding-bottom: 30px;
 	@include mq($from: md) {
-		padding-bottom: 110px;
+		padding-top: 50px;
+		padding-bottom: 60px;
 	}
 }
 
@@ -160,7 +164,6 @@ main {
 	line-height: rem(30px);
 	margin-bottom: 20px;
 	margin-top: 55px;
-	font-family: 'PT Serif';
 	font-weight: normal;
 
 	max-width: 620px;
@@ -200,7 +203,6 @@ main {
 .content h3 {
 	font-size: rem(19px);
 	line-height: rem(25px);
-	font-family: 'PT Serif';
 	margin-bottom: 5px;
 	max-width: 620px;
 	letter-spacing: -0.01em;
