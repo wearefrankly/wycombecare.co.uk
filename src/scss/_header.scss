@@ -26,6 +26,7 @@
 	a {
 		color: $colour-grey-800;
 		text-decoration: none;
+		border: none;
 	}
 
 	@include mq($from: 800px) {

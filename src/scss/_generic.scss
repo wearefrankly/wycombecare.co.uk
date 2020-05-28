@@ -6,11 +6,13 @@ input {
 html {
 	font-size: 100%;
 	font-family: 'Inter', arial, sans-serif;
-	background-color: $colour-green-100;
+	// background-color: $colour-green-100;
+	// background-color: #FBFDED;
 }
 
 body {
 	border-top: 5px solid $colour-green-300;
+	border-top: 5px solid #b1e1b7;
   text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	font-size: 100%;
@@ -19,7 +21,9 @@ body {
 
 a:link,
 a:visited {
-	color: $colour-grey-600;
+	color: $colour-black;
+	border-bottom: 3px solid #2BB7CC;
+	text-decoration: none;
 }
 
 a:hover,
@@ -35,24 +39,73 @@ main {
 	display: block;
 }
 
+.homepage-hero {
+	padding-top: 30px;
+}
+
+.homepage-title {
+	font-size: rem(40px);
+	line-height: rem(40px);
+	font-family: 'PT Serif';
+	font-weight: normal;
+	color: $colour-black;
+
+	max-width: rem(1000px);
+	margin: 0 auto;
+	letter-spacing: -0.03em;
+	@include mq($from: md) {
+		margin-bottom: 40px;
+		text-align: center;
+		font-size: rem(64px);
+		line-height: rem(70px);
+	}
+}
+
+.content p {
+	max-width: 720px;
+	font-size: rem(18px);
+	line-height: rem(25px);
+	margin-bottom: $spacing-scale-5;
+	font-family: 'PT Serif';
+
+	@include mq($from: md) {
+		font-size: rem(25px);
+		line-height: rem(40px);
+		margin-bottom: $spacing-scale-7;
+	}
+}
+
+.content .body-l {
+	max-width: 620px;
+	font-size: rem(22px);
+	line-height: rem(30px);
+	margin-bottom: $spacing-scale-5;
+	font-family: 'PT Serif';
+
+	@include mq($from: md) {
+		font-size: rem(28px);
+		line-height: rem(40px);
+		margin-bottom: $spacing-scale-7;
+	}
+}
+
+
 .hero {
-	margin-top: 100px;
+	margin-top: 60px;
 	position: relative;
-	margin-bottom: 110px;
+	margin-bottom: 40px;
 }
 
 .hero-left {
 	position: relative;
-	width: 35%;
+	width: 45%;
 	padding-top: 95px;
 	z-index: 9;
 	// padding-left: 50px;
 }
 
 .hero-right {
-	position: absolute;
-	top: 0;
-	right: -160px;
+
 }
 
 .heading {
@@ -172,6 +225,26 @@ main {
 	&:first-child {
 		margin-top: 0;
 	}
+
+
+}
+
+.dot1 {
+	color: #E63F1E;
+	// position: relative;
+	// left: 3px;
+}
+
+.dot2 {
+	color: #DFCF33;
+	// position: relative;
+	// left: 3px;
+}
+
+.dot3 {
+	color: #95C11F;
+	// position: relative;
+	// left: 3px;
 }
 
 .content h3 {
@@ -191,20 +264,6 @@ main {
 
 	&:first-child {
 		margin-top: 0;
-	}
-}
-
-.content p {
-	max-width: 620px;
-	font-size: rem(18px);
-	line-height: rem(25px);
-	margin-bottom: $spacing-scale-5;
-	font-family: 'PT Serif';
-
-	@include mq($from: md) {
-		font-size: rem(22px);
-		line-height: rem(35px);
-		margin-bottom: $spacing-scale-7;
 	}
 }
 

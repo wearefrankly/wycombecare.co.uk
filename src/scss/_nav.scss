@@ -1,8 +1,13 @@
+.nav {
+	margin-top: 30px;
+}
+
 .nav ul {
 	list-style: none;
 	overflow-x: scroll;
 	white-space: nowrap;
 	font-size: 0px;
+	font-family: 'PT Serif';
 	@include mq($from: 800px) {
 		white-space: normal;
 		overflow-x: initial;
@@ -12,7 +17,7 @@
 .nav li {
 	display: inline-block;
 	line-height: 20px;
-	font-size: 18px;
+	font-size: 22px;
 }
 
 .nav a:link,
@@ -21,6 +26,7 @@
 	display: block;
 	padding: 15px 15px 15px;
 	color: $colour-grey-700;
+	border: none;
 	@include mq($from: 800px) {
 		padding-top: 17px;
 		padding-bottom: 20px;
