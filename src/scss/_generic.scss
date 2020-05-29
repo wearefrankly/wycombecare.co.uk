@@ -150,6 +150,24 @@ h1 {
 	&:first-child {
 		margin-top: 0;
 	}
+
+	&::after {
+		content: ".";
+		color: $colour-brand-blue;
+	}
+
+}
+
+.content h2:nth-of-type(2n) {
+	&::after {
+		color: $colour-brand-red;
+	}
+}
+
+.content h2:nth-of-type(3n) {
+	&::after {
+		color: $colour-brand-green;
+	}
 }
 
 .content h3 {
