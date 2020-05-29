@@ -23,6 +23,19 @@
 	}
 }
 
+.footer-left {
+	margin-bottom: 10px;
+	@include mq($from: 800px) {
+		float: left;
+	}
+}
+
+.footer-right {
+	@include mq($from: 800px) {
+		float: right;
+	}
+}
+
 .footer p {
 	font-size: rem(18px);
 	line-height: rem(25px);

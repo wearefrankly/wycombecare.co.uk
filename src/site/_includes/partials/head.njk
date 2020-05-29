@@ -1,6 +1,6 @@
 {% set pageTitle = site.title %}
 {% if title %}
-	{% set pageTitle = title + ' - Wycombe Care, UK. ' %}
+	{% set pageTitle = title + ' - ' + site.title %}
 {% endif %}
 
 <title>{{ pageTitle }}</title>
@@ -47,5 +47,6 @@
 {% endif %}
 
 {% include 'partials/headCss.njk' %}
+{% include 'partials/favicon.njk' %}
 
 <link rel="canonical" href="{{ site.url }}{{ page.url | permalink }}">
