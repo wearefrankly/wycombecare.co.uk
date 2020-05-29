@@ -1,15 +1,9 @@
-input {
-	-webkit-appearance: none;
-	appearance: none;
-}
-
 html {
 	font-size: 100%;
 	font-family: 'PT Serif', arial, sans-serif;
 }
 
 body {
-	border-top: 5px solid $colour-green-300;
 	border-top: 5px solid #b1e1b7;
   text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -20,7 +14,7 @@ body {
 a:link,
 a:visited {
 	color: $colour-black;
-	border-bottom: 3px solid #2BB7CC;
+	border-bottom: 3px solid $colour-brand-blue;
 	text-decoration: none;
 }
 
@@ -30,7 +24,7 @@ a:focus {
 }
 
 a:focus {
-	outline: 3px solid #dfcf33;
+	outline: 3px solid $colour-brand-blue;
 }
 
 main {
@@ -40,6 +34,10 @@ main {
 .homepage-hero {
 	padding-top: 30px;
 
+	@include mq($from: md) {
+		margin-bottom: 40px;
+		padding-top: 40px;
+	}
 	img {
 		margin-left: -20px;
 		margin-right: -20px;
@@ -47,20 +45,12 @@ main {
 }
 
 .homepage-title {
-	font-size: rem(32px);
-	line-height: rem(40px);
-	font-weight: normal;
-	color: $colour-black;
-
 	max-width: rem(1000px);
 	margin: 0 auto;
-	letter-spacing: -0.03em;
 	text-align: center;
 	margin-bottom: 25px;
 	@include mq($from: md) {
 		margin-bottom: 40px;
-		font-size: rem(64px);
-		line-height: rem(70px);
 	}
 }
 
@@ -96,8 +86,8 @@ main {
 	}
 }
 
-.heading-title {
-	font-size: rem(40px);
+h1 {
+	font-size: rem(36px);
 	line-height: rem(40px);
 	font-weight: normal;
 	color: $colour-black;
@@ -125,7 +115,7 @@ main {
 	padding-top: 30px;
 	padding-bottom: 30px;
 	@include mq($from: md) {
-		padding-top: 50px;
+		padding-top: 40px;
 		padding-bottom: 60px;
 	}
 }
@@ -139,24 +129,6 @@ main {
 		margin-left: auto;
 		margin-right: auto;
 	}
-}
-
-.content-indent {
-	@include mq($from: lg) {
-		padding-left: 120px;
-	}
-}
-
-.header-anchor:link,
-.header-anchor:visited {
-	color: $colour-blue-500;
-	text-decoration: none;
-	font-weight: normal;
-	position: relative;
-}
-
-.header-anchor::after {
-	content: '#';
 }
 
 .content h2 {
@@ -178,26 +150,6 @@ main {
 	&:first-child {
 		margin-top: 0;
 	}
-
-
-}
-
-.dot1 {
-	color: #E63F1E;
-	// position: relative;
-	// left: 3px;
-}
-
-.dot2 {
-	color: #DFCF33;
-	// position: relative;
-	// left: 3px;
-}
-
-.dot3 {
-	color: #95C11F;
-	// position: relative;
-	// left: 3px;
 }
 
 .content h3 {
@@ -239,183 +191,10 @@ main {
 	margin-bottom: $spacing-scale-3;
 }
 
-.content pre {
-	overflow-x: auto;
-	max-width: 100%;
-
-	background:
-		linear-gradient($colour-yellow-100 100%, $colour-black),
-		linear-gradient($colour-black, $colour-yellow-100 0%) 100% 0,
-    radial-gradient(farthest-side at 0% 50%, rgba(144,134,9,.5), rgba(144,134,9,0)),
-    radial-gradient(farthest-side at 100% 50%, rgba(144,134,9,.5), rgba(144,134,9,0)) 100% 0;
-	background-repeat: no-repeat;
-	background-color: $colour-yellow-100;
-	background-size: 8px 100%, 8px 100%, 8px 100%, 8px 100%;
-
-	background-attachment: local, local, scroll, scroll;
-
-
-
-	font-family: 'Fira Mono', Monaco,'Courier New','Courier',monospace;
-	color: $colour-black;
-	margin-bottom: $spacing-scale-5;
-	padding: $spacing-scale-4;
-	max-width: 900px;
-	@include mq($from: md) {
-		padding: $spacing-scale-6;
-		margin-bottom: $spacing-scale-7;
-	}
-
-	@include mq($from: lg) {
-		margin-left: -100px;
-	}
-}
-
-.content p code,
-.content ul code,
-.content li code {
-	font-family: 'Fira Mono';
-	font-weight: 500;
-}
-
-.content-block {
-	@include mq($from: lg) {
-		display: flex;
-		justify-content: space-between;
-	}
-}
-
-.content-block1 {
-	@include mq($from: lg) {
-		width: 414px;
-		margin-right: 104px;
-	}
-}
-
-.content-blockImage {
-	max-width: 100%;
-}
-
-.content-block2 {
-	@include mq($from: lg) {
-		width: 890px;
-	}
-}
-
-.content-blockA {
-	@include mq($from: lg) {
-		max-width: 890px;
-	}
-}
-
-.content-blockB {
-	@include mq($from: lg) {
-		max-width: 414px;
-		margin-left: 104px;
-	}
-}
-
-.content + .content {
-	padding-top: 0;
-}
-
-.content blockquote {
-	font-style: italic;
-	margin-bottom: $spacing-scale-5;
-	padding: 0 $spacing-scale-4 0 $spacing-scale-4 - 2;
-	color: $colour-black;
-	border-left: 3px solid $colour-black;
-}
-
-.content blockquote cite {
-	font-weight: bold;
-}
-
-.content-indent figure {
-	margin-bottom: $spacing-scale-9;
-	max-width: 900px;
-	@include mq($from: lg) {
-		margin-left: -100px;
-	}
-}
-
-.content-indent .image--small figure {
-	@include mq($from: md) {
-		margin-left: 0;
-	}
-}
-
-figure img {
-	margin-bottom: $spacing-scale-1;
+.content img {
 	display: block;
-}
-
-figcaption {
-	font-size: rem(16px);
-	color: $colour-grey-600;
-	padding-top: $spacing-scale-1;
-	@include mq($from: 600px) {
-		font-size: rem(18px);
-	}
-}
-
-iframe {
-	max-width: 900px;
-	margin-bottom: $spacing-scale-4;
+	margin-bottom: $spacing-scale-5;
 	@include mq($from: md) {
-		margin-left: -100px;
-	}
-}
-
-.content pre code {
-	font-family: 'Fira Mono';
-	font-size: rem(18px);
-	line-height: rem(25px);
-	overflow-x: auto;
-	@include mq($from: md) {
-		font-size: rem(22px);
-		line-height: rem(35px);
-	}
-}
-
-.content .publication-title {
-	margin-bottom: 5px;
-}
-
-.content .publication-meta {
-	color: $colour-grey-600;
-	font-size: rem(16px);
-	line-height: rem(20px);
-	@include mq($from: md) {
-		font-size: rem(18px);
-	}
-}
-
-.article-date {
-	color: $colour-grey-400;
-	font-size: rem(18px);
-	line-height: rem(25px);
-	font-weight: bold;
-	letter-spacing: 0.03em;
-	text-transform: uppercase;
-
-	@include mq($from: md) {
-		font-size: rem(20px);
-	}
-}
-
-.caseStudy-meta {
-	color: $colour-greengrey-500;
-	font-size: rem(18px);
-	line-height: rem(25px);
-	@include mq($from: md) {
-		font-size: rem(20px);
-	}
-}
-
-.article-signUp {
-	margin-top: 50px;
-	@include mq($from: md) {
-		margin-top: 100px;
+		margin-bottom: $spacing-scale-7;
 	}
 }

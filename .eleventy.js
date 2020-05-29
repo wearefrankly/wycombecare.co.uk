@@ -11,13 +11,6 @@ module.exports = config => {
     linkify: true
   };
 
-  config.setLibrary("md", markdownIt(options).use(markdownItAnchor, {
-    permalink: true,
-    permalinkSymbol: '',
-    permalinkBefore: true,
-    level: 2
-  }));
-
   config.addFilter('permalink', str => {
     str = str || '';
     return str.replace(/\.html/g, '');
