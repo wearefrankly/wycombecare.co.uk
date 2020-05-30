@@ -51,6 +51,7 @@ module.exports = config => {
   config
   .addPassthroughCopy('src/site/assets/fonts')
   .addPassthroughCopy('src/site/assets/images')
+  .addPassthroughCopy('src/site/assets/documents')
 
   config.setTemplateFormats(['njk', 'md', 'html', 'png', 'ico', 'svg', 'xml']);
 
