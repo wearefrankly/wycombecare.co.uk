@@ -67,24 +67,6 @@ main {
 	}
 }
 
-.heading {
-	padding-top: 50px;
-	padding-bottom: 50px;
-	@include mq($from: md) {
-		padding-top: 110px;
-		padding-bottom: 110px;
-	}
-}
-
-.heading-measure {
-	max-width: 1200px;
-	padding-left: 20px;
-	padding-right: 20px;
-	@include mq($from: 1240px) {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
 
 h1 {
 	font-size: rem(36px);
@@ -98,16 +80,6 @@ h1 {
 	@include mq($from: md) {
 		font-size: rem(64px);
 		line-height: rem(70px);
-	}
-}
-
-.heading-text {
-	font-size: rem(22px);
-	line-height: rem(30px);
-	max-width: rem(1000px);
-	@include mq($from: md) {
-		font-size: rem(24px);
-		line-height: rem(35px);
 	}
 }
 
