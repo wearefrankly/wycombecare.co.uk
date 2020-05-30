@@ -13,7 +13,7 @@
 	margin-left: 20px;
 	margin-right: 20px;
 
-	@include mq($from: 800px) {
+	@include mq($from: 1200px) {
 		overflow: hidden;
 	}
 
@@ -25,13 +25,13 @@
 
 .footer-left {
 	margin-bottom: 10px;
-	@include mq($from: 800px) {
+	@include mq($from: 1200px) {
 		float: left;
 	}
 }
 
 .footer-right {
-	@include mq($from: 800px) {
+	@include mq($from: 1200px) {
 		float: right;
 	}
 }
